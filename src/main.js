@@ -6,6 +6,8 @@ const path = passwordViewBtn.querySelector("path");
 const form = document.querySelector(".js-form");
 const errorMsg = form.querySelector(".js-error");
 const videoContainer = document.querySelector(".js-video-container");
+const messageContainer = document.querySelector(".js-message-container");
+const messageBtn = messageContainer.querySelector(".js-message-button");
 const password = import.meta.env.VITE_PASSWORD;
 const videoId = import.meta.env.VITE_VIDEO;
 
@@ -59,7 +61,12 @@ form.addEventListener("submit", (e) => {
     removeErrorMessage();
   } else {
     form.classList.add("hidden");
-    videoContainer.classList.remove("hidden");
-    initVideo();
+    messageContainer.classList.remove("hidden");
   }
+});
+
+messageBtn.addEventListener("click", () => {
+  messageContainer.classList.add("hidden");
+  videoContainer.classList.remove("hidden");
+  initVideo();
 });

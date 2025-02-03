@@ -5,22 +5,36 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/src/style.css" rel="stylesheet" />
-    <title>Vite App</title>
+    <title>Junkyard Weirdo</title>
   </head>
   <body class="bg-slate-800 font-poppins">
-    <main class="flex h-screen justify-center items-center">
-      <form class="flex flex-col js-form w-[650px] bg-gray-100 rounded px-24 py-8 shadow-lg border-sky-500 border-3 rounded">
-        <label class="mb-16 text-3xl font-semibold text-center" for="password">Enter the password</label>
+    <main class="flex h-screen justify-center items-center p-10">
+      <form class="flex flex-col js-form w-[650px] bg-gray-100 rounded px-5 lg:px-24 py-8 shadow-lg border-amber-400 border-3 rounded">
+        <label class="mb-8 text-3xl font-semibold text-center" for="password">Enter the password</label>
+        <div class="text-center mb-8">If you don't know the password, kindly fuck off</div>
         <div class="relative">
-          <input class="js-password w-full p-4 text-black border-1 border-black" placeholder="password goes here" type="password" id="password" />
+          <input class="js-password w-full p-4 text-black border-1 border-sky-950 rounded" placeholder="password goes here" type="password" id="password" />
           <svg xmlns="http://www.w3.org/2000/svg" class="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 js-password-view cursor-pointer" fill="#075985" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z" /></svg>
         </div>
         <span class="w-full h-10 flex items-center justify-center my-4">
           <span class="hidden w-full text-red-900 text-sm p-2 js-error">Stop getting the password wrong, silly</span>
         </span>
-        <input class="bg-slate-800 rounded-full py-4 cursor-pointer text-white font-semibold w-1/2 mx-auto hover:bg-sky-500 duration-500" type="submit" value="Enter" />
+        <input class="bg-slate-800 rounded-full py-4 cursor-pointer text-white font-semibold w-full lg:w-1/2 mx-auto hover:bg-amber-400 hover:text-sky-950 duration-500" type="submit" value="Enter" />
       </form>
-      <div class="js-video-container bg-sky-500 border-3 border-sky-500 rounded hidden"></div>
+      <section class="container hidden js-message-container">
+        <div class="flex flex-col mx-auto lg:w-1/2">
+          <div class="text-white text-3xl mb-4">Happy birthday Adam Thomas, sometimes Ewan.</div>
+          <div class="text-white">
+            <div class="mb-4">The button below will reveal content of a senstive nature - please ensure that you view in the appropriate environment.</div>
+            <div class="mb-4">The content is far from exhaustive of all birthday wishing that is due, but a mere sample of some of the most responsive to be contacted by a stranger on facebook, or Darren.</div>
+            <div class="text-xs text-balance">In the future, please leave your phone available for it to be hacked. I promise not to rob you / send threats to your exes. Well, not too often anyway.</div>
+          </div>
+          <button class="js-message-button bg-amber-400 w-full lg:w-48 rounded-full py-4 cursor-pointer text-sky-950 font-semibold hover:bg-sky-950 hover:text-amber-400 duration-500 mt-10">Give me a poke</button>
+        </div>
+      </section>
+      <div class="js-video-container hidden">
+        <div class="js-video bg-amber-400 rounded"></div>
+      </div>
     </main>
     <script type="module" src="/src/main.js"></script>
   </body>
